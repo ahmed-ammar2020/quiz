@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const Material = [
   MatToolbarModule,
@@ -16,6 +17,7 @@ const Material = [
   MatInputModule,
   MatFormFieldModule,
   MatRadioModule,
+  MatTooltipModule,
 ];
 
 @NgModule({

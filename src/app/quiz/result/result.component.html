@@ -1,4 +1,15 @@
 <div class="content">
+  <button
+    mat-icon-button
+    mat-raised-button
+    matTooltip="Redo the quiz"
+    class="redo-quiz"
+    color="accent"
+    (click)="redoQuiz()"
+  >
+    <mat-icon>autorenew</mat-icon>
+  </button>
+
   <h4 class="quiz-title">Quiz Information</h4>
   <ng-container
     *ngIf="numberOfCorrectAnswers >= 0 && numberOfCorrectAnswers <= 5"

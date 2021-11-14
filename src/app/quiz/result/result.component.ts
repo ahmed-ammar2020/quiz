@@ -97,4 +97,8 @@ export class ResultComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  redoQuiz() {
+    this.router.navigateByUrl('/quiz');
+  }
 }
