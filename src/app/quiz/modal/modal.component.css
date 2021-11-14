@@ -1,0 +1,66 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  overflow: hidden;
+}
+
+.modal-content {
+  width: 80vw;
+  height: 50vh;
+  background-image: url("https://quizapi.io/storage/quiz/finishQuiz.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+
+.modal-content .content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 30vw;
+}
+
+.modal-content .content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.modal-content .content p+button {
+  margin-right: 10px;
+}
+
+.modal-content .content button {
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .modal-content .content {
+    width: 50vw;
+  }
+
+  .modal-content .content button.back {
+    margin-top: 10px;
+  }
+
+}

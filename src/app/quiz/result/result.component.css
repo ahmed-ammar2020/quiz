@@ -1,0 +1,104 @@
+.content {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.quiz-title {
+  color: rgb(169, 205, 226);
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.quiz-title::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: rgb(198, 203, 209);
+  width: 40%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.quiz-title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: rgb(198, 203, 209);
+  width: 40%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+h3 {
+  text-align: center;
+}
+
+.fail {
+  color: #BB2124;
+  font-weight: bold;
+}
+
+.good {
+  color: #0f6e1a;
+  font-weight: bold;
+}
+
+.success {
+  color: #22bb33;
+  font-weight: bold;
+}
+
+.ml {
+  margin-left: 5px;
+}
+
+.mt {
+  margin-top: 20px;
+}
+
+
+.qanda {
+  font-family: 'Dosis', sans-serif !important;
+  width: 60%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.question {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.py {
+  padding: 20px 0;
+}
+
+.result-content .question-text {
+  font-size: 18px;
+}
+
+.result-content .answer-text {
+  font-size: 16px;
+}

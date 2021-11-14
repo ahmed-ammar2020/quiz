@@ -1,0 +1,37 @@
+<form [formGroup]="signForm" class="sign-form" (ngSubmit)="submitForm()">
+  <mat-form-field color="primary">
+    <mat-label>Your Name</mat-label>
+    <input type="text" matInput formControlName="userName" autocomplete="off" />
+    <mat-error *ngIf="signForm.controls.userName.errors?.required">
+      Your name is required
+    </mat-error>
+    <mat-error *ngIf="signForm.controls.userName.errors?.pattern">
+      Only letters and numbers are allowed
+    </mat-error>
+  </mat-form-field>
+  <div class="spacer"></div>
+  <mat-form-field color="primary">
+    <mat-label>Your Email</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="userEmail"
+      autocomplete="off"
+    />
+    <mat-error *ngIf="signForm.controls.userEmail.errors?.required">
+      Your email is required
+    </mat-error>
+    <mat-error *ngIf="signForm.controls.userEmail.errors?.pattern">
+      Please enter a valid email
+    </mat-error>
+  </mat-form-field>
+  <div class="spacer"></div>
+  <button
+    [disabled]="signForm.invalid"
+    mat-raised-button
+    color="accent"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>

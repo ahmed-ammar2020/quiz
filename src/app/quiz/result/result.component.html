@@ -1,0 +1,122 @@
+<div class="content">
+  <h4 class="quiz-title">Quiz Information</h4>
+  <ng-container
+    *ngIf="numberOfCorrectAnswers >= 0 && numberOfCorrectAnswers <= 5"
+  >
+    <h3 class="fail">{{ textsToShow[0].text }}</h3>
+    <table>
+      <tr>
+        <td>
+          Score: <span class="fail ml">{{ textsToShow[0].score }}</span>
+        </td>
+        <td class="text-right">
+          Topic: <span class="ml">{{ textsToShow[0].topic }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Total questions:
+          <span class="ml">{{ textsToShow[0].totalQuestions }}</span>
+        </td>
+        <td class="text-right">
+          Grade: <span class="fail ml">{{ textsToShow[0].grade }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Correct answers:
+          <span class="fail ml">{{ textsToShow[0].correctsAnswers }}</span>
+        </td>
+        <td class="text-right">
+          Final: <span class="fail ml">{{ textsToShow[0].final }}</span>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+
+  <ng-container
+    *ngIf="numberOfCorrectAnswers > 5 && numberOfCorrectAnswers <= 8"
+  >
+    <h3 class="good">{{ textsToShow[1].text }}</h3>
+    <table>
+      <tr>
+        <td>
+          Score: <span class="good ml">{{ textsToShow[1].score }}</span>
+        </td>
+        <td class="text-right">
+          Topic: <span class="ml">{{ textsToShow[1].topic }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Total questions:
+          <span class="ml">{{ textsToShow[1].totalQuestions }}</span>
+        </td>
+        <td class="text-right">
+          Grade: <span class="good ml">{{ textsToShow[1].grade }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Correct answers:
+          <span class="good ml">{{ textsToShow[1].correctsAnswers }}</span>
+        </td>
+        <td class="text-right">
+          Final: <span class="good ml">{{ textsToShow[1].final }}</span>
+        </td>
+      </tr>
+    </table></ng-container
+  >
+
+  <ng-container
+    *ngIf="numberOfCorrectAnswers > 8 && numberOfCorrectAnswers <= 10"
+  >
+    <h3 class="success">{{ textsToShow[2].text }}</h3>
+    <table>
+      <tr>
+        <td>
+          Score: <span class="success ml">{{ textsToShow[2].score }}</span>
+        </td>
+        <td class="text-right">
+          Topic: <span class="ml">{{ textsToShow[2].topic }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Total questions:
+          <span class="ml">{{ textsToShow[2].totalQuestions }}</span>
+        </td>
+        <td class="text-right">
+          Grade: <span class="success ml">{{ textsToShow[2].grade }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Correct answers:
+          <span class="success ml">{{ textsToShow[2].correctsAnswers }}</span>
+        </td>
+        <td class="text-right">
+          Final: <span class="success ml">{{ textsToShow[2].final }}</span>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+</div>
+
+<div class="qanda">
+  <h4 class="quiz-title mt">Answers</h4>
+  <div
+    *ngFor="let question of questions; let i = index"
+    class="py result-content"
+  >
+    <div class="question">Question {{ i + 1 }}</div>
+    <p class="question-text">
+      {{ question }}
+    </p>
+    <p class="answer-text">
+      the correct answer is
+      <span class="success">{{ allStringRightAnswers[i] }}</span>
+      &nbsp;&nbsp;&nbsp; ({{ allRightAnswers[i] }})
+    </p>
+  </div>
+</div>

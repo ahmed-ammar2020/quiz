@@ -1,0 +1,25 @@
+.sign-form {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-form mat-form-field {
+  width: 100%;
+}
+
+.sign-form mat-form-field input {
+  padding-left: 10px;
+}
+
+.spacer {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .sign-form {
+    width: 80%;
+  }
+}
